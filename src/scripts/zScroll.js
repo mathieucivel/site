@@ -2,6 +2,7 @@
 
 const zElem = require('./zElem');
 const zBox = require('./zBox');
+const getBoundingClientRect = require('./getBoundingClientRect');
 
 const DEFAULT = {
   element: null,
@@ -84,7 +85,7 @@ const zScroll = (_options = {}) => {
     // - apply a Z offset
     // - add hover and click events
     module.zElems.forEach((_zElem, i) => {
-      _zElem.placeAtCenter(module.element.getBoundingClientRect().toJSON());
+      _zElem.placeAtCenter(getBoundingClientRect(module.element));
       _zElem.tz -= module.zOffset * i;
       _zElem.draw();
 
@@ -145,7 +146,7 @@ const zScroll = (_options = {}) => {
     if (!initialized) return;
     module.zElems.forEach((_zElem, i) => {
       _zElem.reset();
-      _zElem.placeAtCenter(module.element.getBoundingClientRect().toJSON());
+      _zElem.placeAtCenter(getBoundingClientRect(module.element));
       _zElem.tz -= module.zOffset * i;
       _zElem.draw();
     });

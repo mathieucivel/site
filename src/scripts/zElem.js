@@ -1,6 +1,7 @@
 'use strict';
 
 const zBox = require('./zBox');
+const getBoundingClientRect = require('./getBoundingClientRect');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -28,7 +29,7 @@ const DEFAULTS = {
 const makeZElem = (_element, _options) => {
   let zElem = Object.assign(
     {el: _element},
-    zBox(_element.getBoundingClientRect().toJSON()),
+    zBox(getBoundingClientRect(_element)),
     DEFAULTS,
     _options
   );
@@ -80,7 +81,7 @@ const makeZElem = (_element, _options) => {
   };
 
   zElem.reset = () => {
-    Object.assign(zElem, zElem.el.getBoundingClientRect().toJSON());
+    Object.assign(zElem, getBoundingClientRect(zElem.el));
     zElem.tx = 0;
     zElem.ty = 0;
     zElem.tz = 0;

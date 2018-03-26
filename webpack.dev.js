@@ -10,4 +10,4 @@ module.exports = merge(common, {
     watchContentBase: true,
     historyApiFallback: true
   }
-);
+});
