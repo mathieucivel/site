@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   videoZScroll = zScroll({element: document.getElementById('portfolio')});
   //window.videoZScroll = videoZScroll;
   if (window.innerWidth > BREAK_WIDTH) {
-    console.log('init');
     videoZScroll.init();
     videoZScroll.start();
   }
@@ -23,11 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const onResize = _event => {
   if (window.innerWidth <= BREAK_WIDTH) {
-    console.log('stop');
     videoZScroll.stop();
     videoZScroll.clean();
   } else {
-    console.log('restart');
     videoZScroll.init();
     videoZScroll.clean();
     videoZScroll.reinit();
