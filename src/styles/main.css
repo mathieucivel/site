@@ -1,0 +1,166 @@
+@import url('./normalize.css');
+@import url('./mc-font.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400');
+
+/* 
+ * Common styles
+ */
+html {
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: -1px;
+  color: teal;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  letter-spacing: -0.6px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.05em;
+}
+
+a,
+a:link,
+a:visited {
+  color: teal;
+}
+
+/*
+ * Large layout (desktop)
+ */
+#main {
+  display: grid;
+  grid-template:
+    'header               portfolio' 30vh
+    'descriptions         portfolio' 70vh
+    / minmax(250px, 30vw) 1fr;
+  justify-items: center;
+  overflow: hidden;
+}
+#header {
+  grid-area: header;
+  align-self: center;
+}
+#portfolio {
+  grid-area: portfolio;
+  width: 100%;
+  height: 100%;
+  /* */
+  perspective: 2000px;
+  transform: rotate3d(-2, -3, 0, 20deg) translate(0, -20%);
+  transform-style: preserve-3d;
+  /* */
+}
+
+/*
+ * Header content
+ */
+#header-links {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header-links a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-decoration: none;
+  background-color: teal;
+  opacity: 0.2;
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+}
+
+#header-links a:hover {
+  opacity: 1;
+}
+
+#header-links a span {
+  font-size: 1.1rem;
+}
+
+/* 
+ * Portfolio content
+ */
+#portfolio article {
+  display: inline-block;
+  transition: padding 200ms ease;
+  cursor: pointer;
+}
+#portfolio article .video {
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 5px 26px 79px -25px black;
+}
+#portfolio article .description {
+  height: 300px;
+  display: none;
+}
+
+#descriptions {
+  grid-area: descriptions;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+#descriptions .description {
+  max-width: 300px;
+}
+
+/* 
+ * Constrained layout (mobile)
+ */
+@media screen and (max-width: 960px) {
+  #main {
+    display: grid;
+    grid-template:
+      'header' 30vh
+      'portfolio' auto
+      / 1fr;
+    justify-items: center;
+  }
+  #header {
+    grid-area: header;
+    align-self: center;
+  }
+  #portfolio {
+    width: auto;
+    height: auto;
+    perspective: none;
+    transform: none !important;
+    transform-style: none !important;
+  }
+  #portfolio article {
+    top: 0;
+    display: block;
+    transform: none !important;
+  }
+  #portfolio article .video {
+    max-width: 680px;
+    margin: 0 auto;
+    display: block;
+  }
+  #portfolio article .description {
+    margin: 4rem;
+    display: block;
+    max-width: 680px;
+  }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="<%= htmlWebpackPlugin.options.basePath || '/' %>">
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script type="text/javascript">
+      /* FOUC fix */
+      var root = document.getElementsByTagName('html')[0];
+      root.style.visibility = 'hidden';
+      document.addEventListener('DOMContentLoaded', function(event) {
+        root.style.removeProperty('visibility');
+      });
+    </script>
+  </head>
+  <body>
+    
+    <section id="main">
+      <header id="header">
+        <h1>Mathieu Civel</h1>
+        <h2>Full-Stack Web Developper</h2>
+        <div id="header-links">
+          <a class="round-link" href="mailto:mathieu@civel.eu" title="Contact">
+            <span class="mc-envelop"></span>
+          </a>
+          <a href="http://linkedin.com/in/mathieucivel/" title="LinkedIn">
+            <span class="mc-linkedin2"></span>
+          </a>
+          <a href="https://github.com/mathieucivel" title="GitHub">
+            <span class="mc-github"></span>
+          </a>
+          <a href="https://stackoverflow.com/users/926408/placoplatr?tab=profile" title="Stack Overflow">
+            <span class="mc-stackoverflow"></span>
+          </a>
+        </div>
+      </header>
+      
+      <section id="portfolio">
+        <article>
+          <video controls class="video" poster="<%= require('../assets/videos/ioticame-poster.png') %>">
+            <source src="<%= require('../assets/videos/ioticame-1080x607.webm') %>" type="video/webm">
+            <source src="<%= require('../assets/videos/ioticame-1080x607.mp4') %>" type="video/mp4">
+            <p>This browser does not support the video element.</p>
+          </video>
+          <div class="description">
+            <h3>2017 - EDF Lab</h3>
+            <p>
+              Full-stack dashboard application for monitoring IoT devices 
+              (weather stations and thermostats).
+              <ul>
+                <li>Vue.js</li>
+                <li>D3.js</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </p>
+          </div>
+        </article>
+        
+        <article>
+          <video controls class="video" poster="<%= require('../assets/videos/seqfreq-poster.png') %>">
+            <source src="<%= require('../assets/videos/seqfreq-1080x607.webm') %>" type="video/webm">
+            <source src="<%= require('../assets/videos/seqfreq-1080x607.mp4') %>" type="video/mp4">
+            <p>This browser does not support the video element.</p>
+          </video>
+          <div class="description">
+            <h3>2017 - EDF Lab</h3>
+            <p>
+              Quick POC projet (15 days) for event frequency visualisation
+              <ul>
+                <li>Vue.js</li>
+                <li>D3.js</li>
+                <li>ES2016</li>
+              </ul>
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <video controls class="video" poster="<%= require('../assets/videos/semvue-poster.png') %>">
+            <source src="<%= require('../assets/videos/semvue-1080x607.webm') %>" type="video/webm">
+            <source src="<%= require('../assets/videos/semvue-1080x607.mp4') %>" type="video/mp4">
+            <p>This browser does not support the video element.</p>
+          </video>
+          <div class="description">
+            <h3>2016 - EDF Lab</h3>
+            <p>
+              RDF ontology visualisation POC projet (2 months)
+              <ul>
+                <li>React.js</li>
+                <li>D3.js</li>
+                <li>CJSX</li>
+              </ul>
+            </p>
+          </div>
+        </article>
+        
+        <article>
+          <video controls class="video" poster="<%= require('../assets/videos/minijeux-poster.jpg') %>">
+            <source src="<%= require('../assets/videos/minijeux-1080x607.webm') %>" type="video/webm">
+            <source src="<%= require('../assets/videos/minijeux-1080x607.mp4') %>" type="video/mp4">
+            <p>This browser does not support the video element.</p>
+          </video>
+          <div class="description">
+            <h3>2011, 2014</h3>
+            <p>
+              Several serious games for in-house formations and customer best 
+              practises awareness.
+              <br>
+              Design: <a href="http://onsortdans15jours.com">onsortdans15jours.com</a>
+              <ul>
+                <li>jQuery</li>
+                <li>Raphael.js</li>
+                <li>Coffeescript</li>
+              </ul>
+            </p>
+          </div>
+        </article>
+      </section>
+      
+      <section id="descriptions"></section>
+      
+    </section>
+    
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "name": "mathieucivel-page",
+  "version": "0.0.1",
+  "description": "A business page",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack-dev-server --mode development --inline --hot --config webpack.dev.js",
+    "build": "webpack --mode production --progress --hide-modules --config webpack.prod.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mathieucivel/site.git"
+  },
+  "keywords": [
+    "business",
+    "page",
+    "mathieu",
+    "civel"
+  ],
+  "author": "Mathieu Civel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathieucivel/site/issues"
+  },
+  "homepage": "https://github.com/mathieucivel/site#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^8.0.0-beta.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "jest": "^22.4.3",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webapp-webpack-plugin": "^1.2.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "debounce": "^1.1.0"
+  }
+}
