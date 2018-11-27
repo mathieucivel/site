@@ -50,7 +50,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Mathieu Civel',
-      template: './src/index.html'
+      template: './src/index.html',
+      hash: true
     }),
     new FaviconsWebpackPlugin({
       logo: './src/favicon.png',
