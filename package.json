@@ -30,25 +30,25 @@
   },
   "homepage": "https://github.com/mathieucivel/site#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "babel-jest": "^22.4.3",
-    "babel-loader": "^8.0.0-beta.2",
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.0.6",
-    "jest": "^22.4.3",
-    "style-loader": "^0.20.3",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webapp-webpack-plugin": "^1.2.0",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.1",
-    "webpack-merge": "^4.1.2"
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webapp-webpack-plugin": "^2.4.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "debounce": "^1.1.0"
+    "debounce": "^1.2.0"
   }
 }

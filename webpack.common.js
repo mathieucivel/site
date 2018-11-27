@@ -4,16 +4,6 @@ const FaviconsWebpackPlugin = require('webapp-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Mathieu Civel',
-      template: './src/index.html'
-    }),
-    new FaviconsWebpackPlugin({
-      logo: './src/favicon.png',
-      title: 'Mathieu Civel'
-    })
-  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -28,7 +18,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: [require('@babel/plugin-proposal-object-rest-spread')]
+            plugins: ['@babel/plugin-proposal-object-rest-spread']
           }
         }
       },
@@ -56,5 +46,15 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Mathieu Civel',
+      template: './src/index.html'
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/favicon.png',
+      title: 'Mathieu Civel'
+    })
+  ],
 };
