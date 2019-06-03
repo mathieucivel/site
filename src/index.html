@@ -39,6 +39,26 @@
       </header>
       
       <section id="portfolio">
+
+        <article>
+          <video controls class="video" poster="<%= require('../assets/videos/tilt-poster.png') %>">
+            <source src="<%= require('../assets/videos/tilt-1280x720.webm') %>" type="video/webm">
+            <source src="<%= require('../assets/videos/tilt-1280x720.mp4') %>" type="video/mp4">
+            <p>This browser does not support the video element.</p>
+          </video>
+          <div class="description">
+            <h3>2019 - EDF Lab</h3>
+            <p>
+              Pure front-end dashboard application for topic data visualisation.
+              Can handle large corpus files (3 Go and more) without noticeable delay.
+              <ul>
+                <li>Vue.js</li>
+                <li>D3.js</li>
+              </ul>
+            </p>
+          </div>
+        </article>
+
         <article>
           <video controls class="video" poster="<%= require('../assets/videos/ioticame-poster.png') %>">
             <source src="<%= require('../assets/videos/ioticame-1080x607.webm') %>" type="video/webm">
