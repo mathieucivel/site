@@ -25,8 +25,22 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
-  letter-spacing: 0px;
+  margin: 0;
+}
+h2.st1 {
+  letter-spacing: 1.1px;
+}
+h2.st2 {
+  letter-spacing: 1.8px;
+  word-spacing: 14px;
   margin-top: 0;
+  margin-bottom: 10px;
+}
+h2 a {
+  text-decoration: none;
+}
+h2 a:hover {
+  text-decoration: underline;
 }
 
 h3 {
